@@ -4,6 +4,7 @@ import { Route, NavLink, Switch } from 'react-router-dom'
 import './App.css'
 import Github from './Github'
 import Homework from './Homework'
+import Steam from './Steam'
 
 class App extends Component {
   render() {
@@ -20,10 +21,16 @@ class App extends Component {
           <li>
             <NavLink to="/homework">Homework</NavLink>
           </li>
+          <li>
+            <NavLink to="/steam">Steam</NavLink>
+          </li>
+
         </ul>
         <Switch>
           <Route path="/github" component={Github} />
           <Route path="/homework" component={Homework} />
+          <Route path="/steam" component={Steam} />
+
           <Route render={() => (
               <p>To get started, click one of the links above.</p>
           )} />
